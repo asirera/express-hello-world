@@ -141,15 +141,7 @@ h4 {
 	
 
 .button { 
-	float:right;
-	font-size:11px;
-	text-decoration:none;
-	color:#bad8dc;
-	background:url(../images/button.gif) no-repeat 0 0;
-	width:84px;
-	height:25px;
-	line-height:25px;
-	text-align:center;
+
 }
 .button:hover {
 	text-decoration:underline;
@@ -504,6 +496,12 @@ a.dock-item {
 .dock-item span {
 	display: none; 
 	padding-left: 20px;
+}
+
+.button{
+	position: relative; 
+	height: 50px; 	
+	color:rgb(35, 202, 202);
 }
 
 /*==========================================*/

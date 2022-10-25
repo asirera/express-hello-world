@@ -12,7 +12,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/interface.js"></script>
 <link rel="stylesheet" type="text/css" href="/style.css">
-<link rel="stylesheet" type="text/css" href="/main.css">
+ <!-- <link rel="stylesheet" type="text/css" href="/main.css">-->
 </head>
 
 <body>
@@ -20,8 +20,6 @@
   <header>
     <div id="topmenu" class="container">
    
-  
-      <!-- /.logo -->
       
       <div class="dock" id="dock" align="center">
 <div class="dock-container">
@@ -71,21 +69,7 @@
 	);
 
 
-function processInput(txt){
-//   var input = document.getElementById("myInput");
 
-//  var valor = document.getElementById("myInput").value;
- 
-// if (valor.trim()!="") {
-//  alert(valor.trim());
-// }
-
-// if (valor.trim()!="") {
-//  alert(valor.trim());
-// }
-
-
-}
 
 function changeDayMode(x){
   var mode = x;
@@ -102,7 +86,7 @@ function changeDayMode(x){
     
     </div>
   </header>
-    </br>      </br>    
+  
 <div align="center" id="search">
   <table align="center" width="0%" cellpadding="1%;" border="0">
     <tr>
@@ -130,41 +114,33 @@ function changeDayMode(x){
 
   <div align="center">  
 
-  <TABLE>
-   <TR>
-      <TD></TD>
-      <TD></TD>
-       <TD></TD>
-      <TD></TD>
-       <TD></TD>
-      <TD></TD>
-   </TR>
-   <TR>
-       <TD></TD>
-      <TD></TD>
-       <TD></TD>
-      <TD></TD>
-       <TD></TD>
-      <TD></TD>
-   </TR>
 
-</TABLE>
-</br>
 
-<textarea id="myInput" style="border:none;background:gray;"   name="myInput" rows="20" cols="100" ></textarea>
-<!--
-<button  id="myBtn" onclick="javascript:processInput()">Button</button>
--->
+    <p>Click the button to get your coordinates.</p>
 
-<script>
-var input = document.getElementById("myInput");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("myBtn").click();
-  }
-});
-</script>
+    <button onclick="getLocation()">Try It</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+    
+    
+
 
 
 
@@ -176,6 +152,8 @@ input.addEventListener("keyup", function(event) {
 
   <footer>
     <div id="controlpanel">
+      <img src="images/day.png" width="20" height="20" id="myBtn" onclick="changeDayMode('d')">
+      <img src="images/night.png"  width="20" height="20" id="myBtn" onclick="changeDayMode('n')">
       <button  class = "button" id="myBtn" onclick="changeDayMode('d')"><img src="images/day.png" width="20" height="20"></button>
       <button  class = "button" id="myBtn" onclick="changeDayMode('n')"><img src="images/night.png" width="20" height="20"></button>
     </div>
