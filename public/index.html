@@ -3,11 +3,6 @@
 <head>
   <title>home</title>
   <meta charset="utf-8">
- 
-  <!-- 
-    <link rel="stylesheet" href="css/layout.css" type="text/css" media="all"> 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-  -->
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/interface.js"></script>
@@ -15,43 +10,46 @@
  <!-- <link rel="stylesheet" type="text/css" href="/main.css">-->
 </head>
 
-<body>
+<body onload="setImg()">
    <div id="body">
   <header>
     <div id="topmenu" class="container">
    
       
       <div class="dock" id="dock" align="center">
-<div class="dock-container">
-<a target="_blank" class="dock-item" href="https://mail.google.com/mail/u/0/#inbox"><img src="images/gmail.png"></a>
-<a target="_blank" class="dock-item" href="https://login.yahoo.com/config/login_verify2?"><img src="images/ya.png"></a>
-<a target="_blank" class="dock-item" href="https://www.youtube.com/feed/subscriptions"><img src="images/y.png"></a>
-<a target="_blank" class="dock-item" href="https://particulares.bancosantander.es/login/"><img src="images/ba.png"></a>
-
-<a target="_blank" class="dock-item" href="https://www.amazon.es"><img src="images/amazon.png"></a>
-<a target="_blank" class="dock-item" href="http://maps.google.ie/"><img src="images/go.png"><span></span></a>
-<a target="_blank" class="dock-item" href="http://www.ebay.ie/"><img src="images/e.png"></a>
-<a target="_blank" class="dock-item" href="https://www.primevideo.com"><img src="images/primevideo.png"></a>
-<a target="_blank" class="dock-item" href="https://www.netflix.com"><img src="images/netflix.png"><span></span></a>
-
-<a target="_blank" class="dock-item" href="http://www.google.com/"><img src="images/g1.png"></a>
-<a target="_blank" class="dock-item" href="https://login.yahoo.com/config/login_verify2?"><img src="images/ya.png"></a>
-<a target="_blank" class="dock-item" href="http://by146w.bay146.mail.live.com/default.aspx?"><img src="images/h.png"></a>
-<a target="_blank" class="dock-item" href="http://www.aib.ie/personal/online-services/internet-banking"><img src="images/b.png"></a>
-
-<a target="_blank" class="dock-item" href="http://maps.google.ie/"><img src="images/go.png"><span></span></a>
-<a target="_blank" class="dock-item" href="http://www.ebay.ie/"><img src="images/e.png"></a>
-<a target="_blank" class="dock-item" href="https://www.primevideo.com"><img src="images/primevideo.png"></a>
-<a target="_blank" class="dock-item" href="https://www.google.com/accounts/ServiceLogin"><img src="images/gmail.png"><span></span></a>
-<a target="_blank" class="dock-item" href="http://www.google.ie/"><img src="images/g1.png"></a>
-<a target="_blank" class="dock-item" href="https://login.yahoo.com/config/login_verify2?"><img src="images/ya.png"></a>
-<a target="_blank" class="dock-item" href="http://by146w.bay146.mail.live.com/default.aspx?"><img src="images/h.png"></a>
-<a target="_blank" class="dock-item" href="http://www.aib.ie/personal/online-services/internet-banking"><img src="images/b.png"></a>
-
+<div class="dock-container" id="elementos" >
+  <div onmousedown="updatelink(1)"><a class="dock-item" href="" onclick="goTo(1)" ><img id="1" src="images/gmail.png"></a></div>
+  <div onmousedown="updatelink(2)"><a class="dock-item" href="" onclick="goTo(2)"><img id="2" src="images/ya.png"></a></div>
+  <div onmousedown="updatelink(3)"><a class="dock-item" href="" onclick="goTo(3)"><img id="3" src="images/y.png"></a></div>
+  <div onmousedown="updatelink(4)"><a class="dock-item" href="" onclick="goTo(4)"><img id="4" src="images/ba.png"></a></div>
+  <div onmousedown="updatelink(5)"><a class="dock-item" href="" onclick="goTo(5)" ><img id="5" src="images/amazon.png"></a></div>
+  <div onmousedown="updatelink(6)"><a class="dock-item" href="" onclick="goTo(6)" ><img id="6" src="images/go.png"></a></div>
+  <div onmousedown="updatelink(7)"><a class="dock-item" href="" onclick="goTo(7)" ><img id="7" src="images/e.png"></a></div>
+  <div onmousedown="updatelink(8)"><a class="dock-item" href="" onclick="goTo(8)" ><img id="8" src="images/primevideo.png"></a></div>
+  <div onmousedown="updatelink(9)"><a class="dock-item" href="" onclick="goTo(9)" ><img id="9" src="images/netflix.png"></a></div>
+  <div onmousedown="updatelink(10)"><a class="dock-item" href="" onclick="goTo(10)"><img id="10" src="images/g1.png"></a></div>
+  <div onmousedown="updatelink(11)"><a class="dock-item" href="" onclick="goTo(10)"><img src="images/ya.png"></a></div>
+  <div onmousedown="updatelink(12)" ><a class="dock-item" href="" onclick="goTo(10)"><img src="images/h.png"></a></div>
+                  <div onmousedown="updatelink(13)" ><a target="_blank" class="dock-item" id="elementos" href="http://www.aib.ie/personal/online-services/internet-banking"><img src="images/b.png"></a></div>
+                    <div onmousedown="updatelink(14)" ><a target="_blank" class="dock-item" id="elementos" href="http://maps.google.ie/"><img src="images/go.png"><span></span></a></div>
+                      <div onmousedown="updatelink(15)" ><a target="_blank" class="dock-item" id="elementos" href="http://www.ebay.ie/"><img src="images/e.png"></a></div>
+                        <div onmousedown="updatelink(16)" ><a target="_blank" class="dock-item" id="elementos" href="https://www.primevideo.com"><img src="images/primevideo.png"></a></div>
+                          <div onmousedown="updatelink(17)" ><a target="_blank" class="dock-item" id="elementos" href="https://www.google.com/accounts/ServiceLogin"><img src="images/gmail.png"><span></span></a></div>
+                            <div onmousedown="updatelink(18)" ><a target="_blank" class="dock-item" id="elementos" href="http://www.google.ie/"><img src="images/g1.png"></a></div>
+                              <div onmousedown="updatelink(19)" ><a target="_blank" class="dock-item" id="elementos" href="https://login.yahoo.com/config/login_verify2?"><img src="images/ya.png"></a></div>
+                                <div onmousedown="updatelink(20)" ><a target="_blank" class="dock-item" id="elementos" href="http://by146w.bay146.mail.live.com/default.aspx?"><img src="images/h.png"></a></div>
+                                  <div onmousedown="updatelink(21)" ><a target="_blank" class="dock-item" id="elementos" href="http://www.aib.ie/personal/online-services/internet-banking"><img src="images/b.png"></a> </div>
+                                    <div onmousedown="updatelink(22)" ><a target="_blank" class="dock-item" id="elementos" href="http://www.google.ie/"><img src="images/g1.png"></a></div>
+                             <div onmousedown="updatelink(23)" ><a target="_blank" class="dock-item" id="elementos" href="https://login.yahoo.com/config/login_verify2?"><img src="images/ya.png"></a></div>
+        <div onmousedown="updatelink(24)" ><a target="_blank" class="dock-item" id="elementos" href="http://by146w.bay146.mail.live.com/default.aspx?"><img src="images/h.png"></a></div>
+         <div onmousedown="updatelink(25)" ><a target="_blank" class="dock-item" id="elementos" href="http://www.aib.ie/personal/online-services/internet-banking"><img src="images/b.png"></a> </div>
+        
 </div>
 </div>
 <script type="text/javascript">
 	$(document).ready(
+
+
 		function()
 		{
 			$('#dock').Fisheye(
@@ -66,6 +64,8 @@
 				}
 			)
 		}
+
+   
 	);
 
 
@@ -113,30 +113,74 @@ function changeDayMode(x){
 </div>
 
   <div align="center">  
+    <div id="result"></div>
 
 
 
-    <p>Click the button to get your coordinates.</p>
 
-    <button onclick="getLocation()">Try It</button>
-    
-    <p id="demo"></p>
-    
-    <script>
-    var x = document.getElementById("demo");
-    
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
+    <!-- /////////// -->
+<script>
+
+  function setImg(){
+    for (let i = 0; i < 25; i++) { 
+      if(null!=localStorage.getItem("img"+i)){
+    document.getElementById(i).src=localStorage.getItem("img"+i);
       }
-    }
+  }
+}
+
+  var divMouseDown;
+
+ function updatelink(value){
+ 
+  divMouseDown = setTimeout(function() {
+ setUrls(value);
+}, 1000);
+
+}   
+
+//borrar
+$("#old" ).mousedown(function() {
+divMouseDown = setTimeout(function() {
+ setUrls("1");
+}, 1000);
+});
+
+
+$("#elementos" ).mouseup(function() {
+if (divMouseDown) {
+ clearTimeout(divMouseDown);
+}
+});
+
+function setUrls(value) {
+  let text;
+  let url = prompt("Please enter url:", localStorage.getItem("url"+value));
+  let urlimg = prompt("Please enter url of the image:", localStorage.getItem("img"+value));
+  if (url == null || url == "") {
     
-    function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude + 
-      "<br>Longitude: " + position.coords.longitude;
-    }
+  } else {
+    if (typeof(Storage) !== "undefined") {
+  localStorage.setItem("url"+ value, url);
+  localStorage.setItem("img"+value, urlimg);
+  // Retrieve
+  //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+  }
+  
+  document.getElementById(value).src=localStorage.getItem("img"+value);
+  //const img = document.getElementById(value);
+    //img.src = urlimg;
+}
+
+function goTo(value){
+  //alert(localStorage.getItem("url"+value));
+  window.open(localStorage.getItem("url"+value), '_blank');
+}
+
+
     </script>
     
     
