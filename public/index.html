@@ -1,23 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-  <title>home</title>
+  <title>MyInternetWindow</title>
   <meta charset="utf-8">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/interface.js"></script>
+  <link rel="stylesheet" type="text/css" href="/style.css">
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/interface.js"></script>
-<link rel="stylesheet" type="text/css" href="/style.css">
- <!-- <link rel="stylesheet" type="text/css" href="/main.css">-->
 </head>
 
-<body onload="setImg()">
+<body onload="setImg()">  
    <div id="body">
-  <header>
-    <div id="topmenu" class="container">
-   
-      
-      <div class="dock" id="dock" align="center">
-<div class="dock-container" id="elementos" >
+    <header>
+      <div id="topmenu" class="container">
+        <div class="dock" id="dock" >
+          <div class="dock-container" id="elementos" >
   <div onmousedown="updatelink(1)"><a class="dock-item" href="" onclick="goTo(1)" ><img id="1" src="images/gmail.png"></a></div>
   <div onmousedown="updatelink(2)"><a class="dock-item" href="" onclick="goTo(2)"><img id="2" src="images/ya.png"></a></div>
   <div onmousedown="updatelink(3)"><a class="dock-item" href="" onclick="goTo(3)"><img id="3" src="images/y.png"></a></div>
@@ -28,21 +25,21 @@
   <div onmousedown="updatelink(8)"><a class="dock-item" href="" onclick="goTo(8)" ><img id="8" src="images/primevideo.png"></a></div>
   <div onmousedown="updatelink(9)"><a class="dock-item" href="" onclick="goTo(9)" ><img id="9" src="images/netflix.png"></a></div>
   <div onmousedown="updatelink(10)"><a class="dock-item" href="" onclick="goTo(10)"><img id="10" src="images/g1.png"></a></div>
-  <div onmousedown="updatelink(11)"><a class="dock-item" href="" onclick="goTo(11)"><img src="images/ya.png"></a></div>
-  <div onmousedown="updatelink(12)" ><a class="dock-item" href="" onclick="goTo(12)"><img src="images/h.png"></a></div>
-  <div onmousedown="updatelink(13)" ><a class="dock-item" href="" onclick="goTo(13)" ><img src="images/b.png"></a></div>
-  <div onmousedown="updatelink(14)" ><a class="dock-item" href="" onclick="goTo(14)"><img src="images/go.png"><span></span></a></div>
-  <div onmousedown="updatelink(15)" ><a class="dock-item" href="" onclick="goTo(15)"><img src="images/e.png"></a></div>
-  <div onmousedown="updatelink(16)" ><a class="dock-item" href="" onclick="goTo(16)"><img src="images/primevideo.png"></a></div>
-  <div onmousedown="updatelink(17)" ><a class="dock-item" href="" onclick="goTo(17)"><img src="images/gmail.png"><span></span></a></div>
-  <div onmousedown="updatelink(18)" ><a class="dock-item" href="" onclick="goTo(18)"><img src="images/g1.png"></a></div>
-  <div onmousedown="updatelink(19)" ><a class="dock-item" href="" onclick="goTo(19)"><img src="images/ya.png"></a></div>
-  <div onmousedown="updatelink(20)" ><a class="dock-item" href="" onclick="goTo(20)"><img src="images/h.png"></a></div>
-  <div onmousedown="updatelink(21)" ><a class="dock-item" href="" onclick="goTo(21)"><img src="images/b.png"></a> </div>
-  <div onmousedown="updatelink(22)" ><a class="dock-item" href="" onclick="goTo(22)"><img src="images/g1.png"></a></div>
-  <div onmousedown="updatelink(23)" ><a class="dock-item" href="" onclick="goTo(23)"><img src="images/ya.png"></a></div>
-  <div onmousedown="updatelink(24)" ><a class="dock-item" href="" onclick="goTo(24)"><img src="images/h.png"></a></div>
-  <div onmousedown="updatelink(25)" ><a class="dock-item" href="" onclick="goTo(25)"><img src="images/b.png"></a> </div>
+  <div onmousedown="updatelink(11)"><a class="dock-item" href="" onclick="goTo(11)"><img id="11"src="images/ya.png"></a></div>
+  <div onmousedown="updatelink(12)" ><a class="dock-item" href="" onclick="goTo(12)"><img id="12"src="images/h.png"></a></div>
+  <div onmousedown="updatelink(13)" ><a class="dock-item" href="" onclick="goTo(13)" ><img id="13" src="images/b.png"></a></div>
+  <div onmousedown="updatelink(14)" ><a class="dock-item" href="" onclick="goTo(14)"><img id="14" src="images/go.png"></a></div>
+  <div onmousedown="updatelink(15)" ><a class="dock-item" href="" onclick="goTo(15)"><img id="15" src="images/e.png"></a></div>
+  <div onmousedown="updatelink(16)" ><a class="dock-item" href="" onclick="goTo(16)"><img id="16" src="images/primevideo.png"></a></div>
+  <div onmousedown="updatelink(17)" ><a class="dock-item" href="" onclick="goTo(17)"><img id="17" src="images/gmail.png"></a></div>
+  <div onmousedown="updatelink(18)" ><a class="dock-item" href="" onclick="goTo(18)"><img id="18" src="images/g1.png"></a></div>
+  <div onmousedown="updatelink(19)" ><a class="dock-item" href="" onclick="goTo(19)"><img id="19" src="images/ya.png"></a></div>
+  <div onmousedown="updatelink(20)" ><a class="dock-item" href="" onclick="goTo(20)"><img id="20" src="images/h.png"></a></div>
+  <div onmousedown="updatelink(21)" ><a class="dock-item" href="" onclick="goTo(21)"><img id="21" src="images/b.png"></a> </div>
+  <div onmousedown="updatelink(22)" ><a class="dock-item" href="" onclick="goTo(22)"><img id="22" src="images/g1.png"></a></div>
+  <div onmousedown="updatelink(23)" ><a class="dock-item" href="" onclick="goTo(23)"><img id="23" src="images/ya.png"></a></div>
+  <div onmousedown="updatelink(24)" ><a class="dock-item" href="" onclick="goTo(24)"><img id="24" src="images/h.png"></a></div>
+  <div onmousedown="updatelink(25)" ><a class="dock-item" href="" onclick="goTo(25)"><img id="25" src="images/b.png"></a> </div>
         
 </div>
 </div>
@@ -77,11 +74,89 @@ function changeDayMode(x){
    document.body.style.backgroundColor = 'black'; 
    document.getElementById("body").style.opacity = "0.5"; 
  }else{
-    document.body.style.backgroundColor = '#131b20'; 
+    document.body.style.backgroundColor = '#11132d'; 
     document.getElementById("body").style.opacity = "1"; 
  }
 
 }
+
+var divMouseDown;
+
+ function updatelink(value){
+    divMouseDown = setTimeout(function() {
+    setUrls(value);
+    }, 1000);
+
+}   
+
+$("#elementos" ).mouseup(function() {
+if (divMouseDown) {
+ clearTimeout(divMouseDown);
+}
+});
+
+function setImg(){
+  if (typeof(Storage) !== "undefined") {
+    for (let i = 1; i < 25; i++) { 
+
+     
+        var a = localStorage.getItem("img"+i);
+          if (a == null || a == "" || a == 'null') {
+          } else {
+          document.getElementById(i).src = "img"+i;
+          }
+   
+   
+  }
+
+} else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+
+     
+  }
+
+
+function goTo(value){
+    //alert(localStorage.getItem("url"+value));
+    window.open(localStorage.getItem("url"+value), '_blank');
+  }
+
+ 
+
+
+
+
+function setUrls(value) {
+  let url = prompt("Please enter url:", localStorage.getItem("url"+value));
+  
+  if (url == null || url == "" || url == "null") {
+    
+  } else {
+    if (typeof(Storage) !== "undefined") {
+     localStorage.setItem("url"+ value, url);
+     document.getElementById(value).src=localStorage.getItem("url"+value);
+    } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+  }
+
+  
+  let urlimg = prompt("Please enter url of the image:", localStorage.getItem("img"+value));
+
+  if (urlimg == null || urlimg == "") {
+    
+} else {
+    if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("img"+value, urlimg);
+    document.getElementById(value).src=localStorage.getItem("img"+value);
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+}
+
+}
+
   	</script>
     
     </div>
@@ -110,99 +185,36 @@ function changeDayMode(x){
       </td>
     </tr>
   </table>
-</div>
-
-  <div align="center">  
-    <div id="result"></div>
-
-
-
-
-    <!-- /////////// -->
-<script>
-
-  function setImg(){
-    for (let i = 0; i < 25; i++) { 
-      if(null!=localStorage.getItem("img"+i)){
-    document.getElementById(i).src=localStorage.getItem("img"+i);
-      }
-  }
-}
-
-  var divMouseDown;
-
- function updatelink(value){
- 
-  divMouseDown = setTimeout(function() {
- setUrls(value);
-}, 1000);
-
-}   
-
-//borrar
-$("#old" ).mousedown(function() {
-divMouseDown = setTimeout(function() {
- setUrls("1");
-}, 1000);
-});
-
-
-$("#elementos" ).mouseup(function() {
-if (divMouseDown) {
- clearTimeout(divMouseDown);
-}
-});
-
-function setUrls(value) {
-  let text;
-  let url = prompt("Please enter url:", localStorage.getItem("url"+value));
-  let urlimg = prompt("Please enter url of the image:", localStorage.getItem("img"+value));
-  if (url == null || url == "") {
-    
-  } else {
-    if (typeof(Storage) !== "undefined") {
-  localStorage.setItem("url"+ value, url);
-  localStorage.setItem("img"+value, urlimg);
-  // Retrieve
-  //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
-  }
   
-  document.getElementById(value).src=localStorage.getItem("img"+value);
-  //const img = document.getElementById(value);
-    //img.src = urlimg;
-}
+</div>
 
-function goTo(value){
-  //alert(localStorage.getItem("url"+value));
-  window.open(localStorage.getItem("url"+value), '_blank');
-}
-
-
-    </script>
+  <div style="background-color: blueviolet;" align="center">  
     
-    
+    <!-- <iframe width="60%" height="500" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe> -->
 
-
-
-
+  
 </div>
 
 
 
+<button class="glow-on-hover" type="button">HOVER ME, THEN CLICK ME!</button>
 
+ 
+  
 
-  <footer>
-    <div id="controlpanel">
-      <img src="images/day.png" width="20" height="20" id="myBtn" onclick="changeDayMode('d')">
-      <img src="images/night.png"  width="20" height="20" id="myBtn" onclick="changeDayMode('n')">
-      <button  class = "button" id="myBtn" onclick="changeDayMode('d')"><img src="images/day.png" width="20" height="20"></button>
-      <button  class = "button" id="myBtn" onclick="changeDayMode('n')"><img src="images/night.png" width="20" height="20"></button>
-    </div>
+    <div class="foot"> 
+      <footer>
+        <div class="nightmode" >
+          <img src="images/day.png" width="20" height="20" id="myBtn" onclick="changeDayMode('d')">
+          <img src="images/night.png"  width="20" height="20" id="myBtn" onclick="changeDayMode('n')">
+          
+        </div>
+         <!-- 555wwwwwwwwwwwwwwwwwwwwwwwww555<a  href="" >Link a ...</a> -->
+        
+        </div>
 </footer>
-  </div>
+</div>
 </body>
 </html>
 
