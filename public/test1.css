@@ -1,0 +1,54 @@
+.AccordionTitle, .AccordionContent, .AccordionContainer
+{
+ 
+  width:100px;
+  
+}
+
+.AccordionTitle
+{
+  height:20px;
+  overflow:hidden;
+  cursor:pointer;
+  font-family: "Comic Sans MS", cursive;
+  font-size:8pt;
+  color:#FFF;
+  font-weight:bold;
+  vertical-align:middle;
+  text-align:center;
+  background-repeat:repeat-x;
+  display:table-cell;
+  background-image:url('images/2.png');
+  -moz-user-select:none;
+  
+}
+
+.AccordionTitle:hover {
+
+background-image:url('images/2.png');
+
+	}
+
+.AccordionContent
+{
+  height:0px;
+  overflow:auto;
+  display:none;
+  background-image:url('images/5.png');
+
+    font-family: "Comic Sans MS", cursive;
+  font-size:8pt;
+  color:#FFF;
+}
+
+.AccordionContainer
+{
+  
+    font-family: "Comic Sans MS", cursive;
+  font-size:8pt;
+  color:#FFF;
+}
+/*border-top: solid 1px  silver;
+  border-bottom: solid 1px silver;
+  border-left: solid 2px silver;
+  border-right: solid 2px silver;*/

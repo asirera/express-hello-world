@@ -6,7 +6,8 @@
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/interface.js"></script>
   <link rel="stylesheet" type="text/css" href="/style.css">
-
+  <link href="test1.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="test1.js"></script>
 </head>
 
 <body onload="setImg()">  
@@ -103,7 +104,7 @@ function setImg(){
         var a = localStorage.getItem("img"+i);
           if (a == null || a == "" || a == 'null') {
           } else {
-          document.getElementById(i).src = "img"+i;
+          document.getElementById(i).src = localStorage.getItem("img"+i);
           }
    
    
@@ -123,8 +124,28 @@ function goTo(value){
   }
 
  
-
-
+function testloadfile(){
+  loadDoc();
+}
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {loadData(this);}
+  xhttp.open("GET", "cd_catalog.xml");//pasarle el fichero, upload/read file
+  xhttp.send();
+}
+function loadData(xml) {
+  const xmlDoc = xml.responseXML;
+  const x = xmlDoc.getElementsByTagName("CD");
+  let table="<tr><th>Artist</th><th>Title</th></tr>";
+  for (let i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
 
 
 function setUrls(value) {
@@ -157,11 +178,22 @@ function setUrls(value) {
 
 }
 
+function options() {
+  var x = document.getElementById("options");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+
+
   	</script>
     
     </div>
   </header>
-  
+
 <div align="center" id="search">
   <table align="center" width="0%" cellpadding="1%;" border="0">
     <tr>
@@ -197,11 +229,172 @@ function setUrls(value) {
 </div>
 
 
+<button onclick="options()">Settings</button>
 
-<button class="glow-on-hover" type="button">HOVER ME, THEN CLICK ME!</button>
-
- 
+<div id="options">
+<div class="right">
+  <div id="AccordionContainer" class="AccordionContainer">
+  <div onClick="runAccordion(1);">
+  <div class="AccordionTitle" onselectstart="return false;">
+        Load/Save
+      </div>
+  </div>
+  <div id="Accordion1Content" class="AccordionContent">
+  <table border="0" align="center">
+  <tr>
+  <td align="center"><A target="nav" href="http://www.google.com/"><b>Load</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.aib.ie/personal/online-services/internet-banking"><b>Save/download xml</b></A></td>
+  </tr>
+  </table>
+  </div>
+  <div onClick="runAccordion(2);">
+  <div class="AccordionTitle" onselectstart="return false;">
+        Background
+      </div>
+  </div>
+  <div id="Accordion2Content" class="AccordionContent">
+  <table border="0" align="center">
+  <tr>
+  <td align="center"><A target="nav" href="http://www.nationalgeographic.com/"><b>National Geographic</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.letmewatchthis.com/index.php?search_keywords="><b>Letmewatchthis</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.blinkx.com/?search="><b>Blinkx</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.cucirca.com/"><b>Cucirca</b></A></td>
+  </tr>
+  </table>
+  </div>
+  <div onClick="runAccordion(3);">
+  <div class="AccordionTitle" onselectstart="return false;">
+        Shopping
+      </div>
+  </div>
+  <div id="Accordion3Content" class="AccordionContent">
+  <table border="0" align="center">
+  <tr>
+  <td align="center"><A target="nav" href="http://www.ebay.ie/"><b>eBay</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.pixmania.ie/ie/uk/home.html"><b>Pixmania</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://ireland.dell.com/"><b>Dell</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.iwantoneofthose.com/"><b>Iwantoneofthose</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.superdry.com/"><b>Superdry</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://uk.shopping.com/"><b>Shopping.com</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.amazon.co.uk/"><b>Amazon</b></A></td>
+  </tr>
+  </table>
+  </div>
+  <div onClick="runAccordion(4);">
+  <div class="AccordionTitle" onselectstart="return false;">
+        Social Webs
+      </div>
+  </div>
+  <div id="Accordion4Content" class="AccordionContent">
+  <table border="0" align="center">
+  <tr>
+  <td align="center"><A target="nav" href="http://www.facebook.com/"><b>FaceBook</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.linkedin.com/"><b>Linkedin</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.myspace.com/"><b>Myspace</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://twitter.com/"><b>twitter</b></A></td>
+  </tr>
+  </table>
+  </div>
+  <div onClick="runAccordion(5);">
+  <div class="AccordionTitle" onselectstart="return false;">
+        Banking
+      </div>
+  </div>
+  <div id="Accordion5Content" class="AccordionContent">
+  <table border="0" align="center">
+  <tr>
+  <td align="center"><A target="nav" href="https://www.paypal.com/ie"><b>PayPal</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.aib.ie/personal/home"><b>AIB</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="https://extranet.banesto.es/npage/loginParticulares.htm"><b>Banesto</b></A></td>
+  </tr>
+  </table>
+  </div>
+  <div onClick="runAccordion(6);">
+  <div class="AccordionTitle" onselectstart="return false;">
+        Travel
+      </div>
+  </div>
+  <div id="Accordion6Content" class="AccordionContent">
+  <table border="0" align="center">
+  <tr>
+  <td align="center"><A target="nav" href="http://www.ryanair.com/en"><b>Ryanair</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.aerlingus.com/home/index.jsp"><b>Aerlingus</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.skyscanner.ie/"><b>Skyscanner</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.iberia.com//"><b>Iberia</b></A></td>
+  </tr>
+  </table>
+  </div>
+  <div onClick="runAccordion(7);">
+  <div class="AccordionTitle" onselectstart="return false;">
+        Help
+      </div>
+  </div>
+  <div id="Accordion7Content" class="AccordionContent">
+  <table border="0" name="more">
+  <tr>
+  <td align="center"><A target="nav" href="http://www.anpost.ie/AnPost/"><b>How do I change the links?</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.bing.com/"><b>Saving changes</b></A></td>
+  </tr>
   
+  <tr>
+  <td align="center"><A target="nav" href="http://maps.google.com/"><b>Google maps</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.track-trace.com/post"><b>Track-Trace</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://translate.google.com/#"><b>translator</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://www.wordreference.com/"><b>Wordreference</b></A></td>
+  </tr>
+  <tr>
+  <td align="center"><A target="nav" href="http://ie.yahoo.com/?p=us"><b>Yahoo</b></A></td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  </div>
+</div>
+
 
     <div class="foot"> 
       <footer>
