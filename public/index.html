@@ -105,7 +105,7 @@ function setImg(){
           if (a == null || a == "" || a == 'null') {
           } else {
           document.getElementById(i).src = localStorage.getItem("img"+i);
-          }
+a          }
    
    
   }
@@ -210,7 +210,7 @@ function options() {
       <a target="_blank" href="http://www.youtube.com/"><img src="images/yout.png"> </a>
       </td>
       <td align="center">
-        <form action="http://www.youtube.com/results" method="get" target="_blank">
+        <form  action="http://www.youtube.com/results" method="get" target="_blank">
           <input name="search_query" size="15" type="text" maxlength="128" style="background:transparent;color:#FFF;">
           <input type="submit" value="Go">
         </form>
@@ -224,11 +224,28 @@ function options() {
     
     <!-- <iframe width="60%" height="500" src="https://www.youtube.com/embed/tgbNymZ7vqY">
     </iframe> -->
+    <h2>HTML Forms</h2>
 
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form> 
+
+    ------
+
+    
+    <form action="https://example.com" method="POST" target="_blank">
+      <label for="data">Send some sweet data</label>
+      <input id="data" name="some-sweet-data"/>
+      <button>Submit</button>
+    </form>
   
 </div>
 
-
+<iframe src="http://www.google.com/"></iframe>
 <button onclick="options()">Settings</button>
 
 <div id="options">
